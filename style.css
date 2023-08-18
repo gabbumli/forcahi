@@ -23,8 +23,6 @@ body {
 }
 .card .user {
     position: relative;
-    width: 400px;
-    min-height: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
