@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cahi's birthday</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="user">
+            <div class="imgBox">
+                <img src="assets/cahi2.jpg">
+            </div>
+            <div class="content">
+                <p>Today, August 20th is Asahi's birthday🎉<br>
+                    <span>@AM01ASAHI</span>
+                </p>
+            </div>
+            <span class="toggle"></span>
+        </div>
+    </div>
+
+    <script>
+        let toggle = document.querySelector(".toggle");
+        let card = document.querySelector(".card");
+        toggle.onclick = function () {
+            card.classList.toggle('active')
+          }
+    </script>
+    
+</body>
+</html>
