@@ -1,0 +1,91 @@
+:root 
+{
+    --bg: #152533;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg);
+
+}
+
+.card {
+    position: relative;
+    transition: 0.5s;
+    height: 100px;
+    transition-delay: 0.5s;
+}
+.card.active {
+    height: 450px;
+    transition-delay: 0s;
+}
+.card .user {
+    position: relative;
+    width: 400px;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 60px 40px 30px;
+    background: #2196f3;
+    border-radius: 10px;
+}
+.card .user .imgBox {
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    overflow: hidden;
+    transition: 0.5s;
+    z-index: 10;
+}
+
+.card .user .imgBox img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .user .content {
+    position: relative;
+    text-align: center;
+}
+
+.card .user .content p {
+    font-size: 1.2em;
+    line-height: 1.05em;
+    font-weight: 600;
+    color: #fff;
+}
+.card .user .content p span {
+    font-size: 0.75em;
+    font-weight: 400;
+}
+
+.card .user .toggle {
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    padding: 5px 15px;
+    background: #fff;
+    border-radius: 30px;
+    transform: translateY(50%);
+    border: 6px solid var(--bg);
+    text-align: center;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.5s;
+    
+}
+
+.card .user .toggle::before {
+    content: "Click me !";
+}
