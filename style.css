@@ -183,12 +183,31 @@ a {
     font-size: 1.1em;
 }
 
-#firstImg {
-    width: 200px; /* Adjust the width as desired */
+.firstImg {
+    width: 300px; /* Adjust the width as desired */
     height: auto; /* Automatically adjust the height to maintain aspect ratio */
     display: block; /* Ensures proper spacing and alignment */
     margin: 0 auto; /* Center the image horizontally */
     border-radius: 5px; /* Apply a circular border to make it more visually appealing */
     border: 2px solid #ccc; /* Add a border for a decorative effect */
     margin-bottom: 15px;
+}
+
+#mdp {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    padding: 5px;
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+    margin-top: 10px; 
+}
+
+.wishes {
+    border: none; /* Remove the default border */
+    border-bottom: 2px solid #ccc; /* Add a bottom border for separation */
+    padding: 5px; /* Add some padding for spacing */
+    outline: none; /* Remove the input focus outline */
+    width: 100%; /* Expand the input to fill the width */
+    background-color: transparent; /* Make the background transparent */
 }
