@@ -17,17 +17,17 @@ body {
 
 }
 
-.card {
+.maincard {
     position: relative;
     transition: 0.5s;
     height: 100px;
     transition-delay: 0.5s;
 }
-.card.active {
+.maincard.active {
     height: 450px;
     transition-delay: 0s;
 }
-.card .user {
+.maincard .user {
     position: relative;
     display: flex;
     justify-content: center;
@@ -38,7 +38,7 @@ body {
     background: #2196f3;
     border-radius: 10px;
 }
-.card .user .imgBox {
+.maincard .user .imgBox {
     position: absolute;
     top: 0;
     transform: translateY(-50%);
@@ -51,30 +51,30 @@ body {
     z-index: 10;
 }
 
-.card .user .imgBox img{
+.maincard .user .imgBox img{
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.card .user .content {
+.maincard .user .content {
     position: relative;
     text-align: center;
 }
 
-.card .user .content p {
+.maincard .user .content p {
     font-size: 1.2em;
     line-height: 1.05em;
     font-weight: 600;
     color: #fff;
 }
-.card .user .content p span {
+.maincard .user .content p span {
     font-size: 0.75em;
     font-weight: 400;
 }
 
-.card .user .toggle {
+.maincard .user .toggle {
     position: absolute;
     bottom: 0;
     width: 120px;
@@ -90,20 +90,20 @@ body {
 
 }
 
-.card .user .toggle::before {
+.maincard .user .toggle::before {
     content: "Click me!";
 }
 
-.card.active .user .toggle {
+.maincard.active .user .toggle {
     background: #ff4383;
     color: #fff;
 }
 
-.card.active .user .toggle::before {
+.maincard.active .user .toggle::before {
     content: "Close";
 }
 
-.card .list {
+.maincard .list {
     /* padding-inline-start: 0 !important; */
     position: relative;
     top: 30px;
@@ -115,11 +115,11 @@ body {
     overflow: hidden;
 }
 
-.card.active .list {
+.maincard.active .list {
     height: 325px;
 }
 
-.card .list li {
+.maincard .list li {
     list-style: none;
     /* width: 100%; */
     min-height: 100px;
@@ -132,7 +132,7 @@ body {
     padding: 10px 30px;
 }
 
-.card.active .list li {
+.maincard.active .list li {
     opacity: 1;
     transform: scale(1);
     transition-delay: calc(0.25s * var(--i));
@@ -144,14 +144,14 @@ ul {
     list-style: none;
 }
 
-.card .list li a {
+.maincard .list li a {
 
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.card .list li a .iconBox {
+.maincard .list li a .iconBox {
     position: relative;
     width: 60px;
     height: 60px;
@@ -163,17 +163,17 @@ ul {
 
 }
 
-.card .list li a .iconBox i {
+.maincard .list li a .iconBox i {
     color: #fff;
     font-size: 1.5em;
 }
 
-/* .card .list li a p {
+/* .maincard .list li a p {
     color: #666;
     font-size: 1.1em;
 } */
 
-.card .list li a:hover p {
+.maincard .list li a:hover p {
     color: #111;
 }
 
@@ -181,4 +181,14 @@ a {
     text-decoration: none;
     color: #666;
     font-size: 1.1em;
+}
+
+#firstImg {
+    width: 200px; /* Adjust the width as desired */
+    height: auto; /* Automatically adjust the height to maintain aspect ratio */
+    display: block; /* Ensures proper spacing and alignment */
+    margin: 0 auto; /* Center the image horizontally */
+    border-radius: 5px; /* Apply a circular border to make it more visually appealing */
+    border: 2px solid #ccc; /* Add a border for a decorative effect */
+    margin-bottom: 15px;
 }

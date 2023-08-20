@@ -5,10 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cahi's birthday</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href=
+"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" 
+          rel="stylesheet" integrity=
+"sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" 
+          crossorigin="anonymous">
+    <script src=
+"https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+            integrity=
+"sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+            crossorigin="anonymous">
+    </script>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="card">
+    <div class="maincard">
         <div class="user">
             <div class="imgBox">
                 <img src="assets/cahi2.jpg">
@@ -22,13 +33,13 @@
         </div>
         <ul class="list">
             <li style="--clr:#c71610;--i:0;">
-                <a href="#">
-                    <div class="iconBox"><i class="fa-solid fa-gift"></i></div>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#GFG" type="button">
+                    <div class="iconBox"><i class="fa-solid fa-gem"></i></div>
                     <p>Diamonds</p>
                 </a>
             </li>
             <li style="--clr:#0a66c2;--i:1;">
-                <a href="#">
+                <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModalToggle1" role="button">
                     <div class="iconBox"><i class="fa-solid fa-clipboard-list"></i></div>
                     <p>Share your desire with me</p>
                 </a>
@@ -36,12 +47,104 @@
         </ul>
     </div>
 
+    <div class="modal fade" id="GFG">
+        <div class="modal-dialog  modal-lg  
+                    modal-dialog-scrollable ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="GFGLabel"> 
+                        Bday wishes for you
+                    </h5>
+                    <button type="button" class="btn-close" 
+                            data-bs-dismiss="modal" aria-label="Close">
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img id="firstImg" src="assets/cahi2.jpg">
+                    <h5>Dearest Cahi,</h5>
+                    <p>Today is the day you were brought into this world to be a blessing and inspiration to the people around you.</p>
+
+                    <p>On this special day, I've prepared something truly special just for you. This amburadul mini-project is dedicated to you, the one and only, my precious person.</p>
+
+                    <p>Here's a collection of my smiles, wishing you a day filled with the same happiness and joy that you bring to me💗</p>
+
+                    <p>Happy birthday to one of the kindest and the sweetest people I've ever known, my beloved Cahi!</p>
+                    <p>You deserve all the love, laughter, and heartwarming moments that life can offer. May this year be brimming with success, creativity, and new adventures for you.🎂🎉</p>
+                    <p>With all my love and warmest wishes,<br>Yujinie.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- First modal dialog -->
+<div class="modal fade" id="exampleModalToggle1" aria-hidden="true" aria-labelledby="exampleModalToggleLabel1" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel1">Modal 1</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Let me now what you want for your bday gift. Tapi harus lewat verifikasi dulu.. apakah kamu benar acahi ku? 
+            <input type="text" id="mdp" name="mdp" placeholder="Entry a password"><br>          
+            <button disabled id="submit" class="btn btn-primary" data-bs-target="#exampleModalToggle22" data-bs-toggle="modal" data-bs-dismiss="modal">
+                Submit
+              </button>          
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">
+          Cancel
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Second modal dialog -->
+<div class="modal fade" id="exampleModalToggle22" aria-hidden="true" aria-labelledby="exampleModalToggleLabel22" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalToggleLabel22">Error</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h3> Oops, it seems that the feature is not available on your device :p </h3>
+        <br>
+        <p>tp boonk.. emang gabisa submit apa apah ngehehehehe -.- 
+        
+        Just tell me on kkt! ok? 
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
     <script>
         let toggle = document.querySelector(".toggle");
-        let card = document.querySelector(".card");
+        let card = document.querySelector(".maincard");
         toggle.onclick = function () {
             card.classList.toggle('active')
           }
+        let inputElement = document.getElementById("mdp");
+        let submitButton = document.getElementById("submit");
+
+        // Add an input event listener to the input element
+        inputElement.addEventListener("input", function() {
+            // Check if the input value is empty
+            if (inputElement.value.trim() === "") {
+                // If empty, disable the submit button
+                submitButton.disabled = true;
+            } else {
+                // If not empty, enable the submit button
+                submitButton.disabled = false;
+            }
+        });
     </script>
     
 </body>
